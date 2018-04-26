@@ -11,7 +11,7 @@ import struct
 from bluepy import btle
 
 from time import sleep
-from dpg_command import DPGCommand
+from .dpg_command import DPGCommand
 
 DEFAULT_TIMEOUT = 1
 

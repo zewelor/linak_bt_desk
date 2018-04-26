@@ -1,5 +1,5 @@
-from desk_position import DeskPosition
-from desk_speed import DeskSpeed
+from .desk_position import DeskPosition
+from .desk_speed import DeskSpeed
 
 
 class HeightSpeed:

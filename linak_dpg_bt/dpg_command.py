@@ -1,7 +1,7 @@
 import codecs
 import struct
 
-from desk_position import DeskPosition
+from .desk_position import DeskPosition
 
 
 class DPGCommand:

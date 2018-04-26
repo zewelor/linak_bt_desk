@@ -1,12 +1,12 @@
 import logging
 from time import sleep
 
-import constants
-from connection import BTLEConnection
-from desk_mover import DeskMover
-from desk_position import DeskPosition
-from dpg_command import DPGCommand, DeskOffsetCommand, MemorySetting1Command, MemorySetting2Command
-from height_speed import HeightSpeed
+import linak_dpg_bt.constants as constants
+from .connection import BTLEConnection
+from .desk_mover import DeskMover
+from .desk_position import DeskPosition
+from .dpg_command import DPGCommand, DeskOffsetCommand, MemorySetting1Command, MemorySetting2Command
+from .height_speed import HeightSpeed
 
 _LOGGER = logging.getLogger(__name__)
 
