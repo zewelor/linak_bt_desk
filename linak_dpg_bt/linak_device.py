@@ -90,8 +90,8 @@ class LinakDesk:
             self._bdaddr,
             self.desk_offset.human_cm,
             self.name,
-            self._with_desk_offset(favorite_position_1).human_cm,
-            self._with_desk_offset(favorite_position_2).human_cm,
+            self._with_desk_offset(self.favorite_position_1).human_cm,
+            self._with_desk_offset(self.favorite_position_2).human_cm,
             self._with_desk_offset(self.height_speed.height).human_cm,
         )
 
