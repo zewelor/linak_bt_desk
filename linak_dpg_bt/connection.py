@@ -85,7 +85,7 @@ class BTLEConnection(btle.DefaultDelegate):
             _LOGGER.debug("Writing %s to %s with with_response=%s", codecs.encode(value, 'hex'), handle, with_response)
             self._conn.writeCharacteristic(handle, value, withResponse=with_response)
             if timeout:
-                _LOGGER.debug("Waiting for notifications for %s", timeout)
+                _LOGGER.debug("Waiting for notifications for %d second(s)", timeout)
                 self._conn.waitForNotifications(timeout)
         except btle.BTLEException as ex:
             _LOGGER.error("Got exception from bluepy while making a request: %s", ex)
