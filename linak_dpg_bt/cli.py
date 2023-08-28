@@ -50,6 +50,14 @@ def get_height(desk):
 def move_to(desk, target):
   desk.move_to_cm(target)
 
+
+@cli.command()
+@click.argument('slot', type=click.IntRange(1, 2))
+@pass_desk
+def move_to_fav(desk, slot):
+  desk.move_to_fav(slot)
+
+
 @cli.command()
 @click.pass_context
 def state(ctx):
