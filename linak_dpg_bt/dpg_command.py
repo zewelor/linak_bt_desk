@@ -14,7 +14,15 @@ class DPGCommand:
         command_type = data[1]
         command_data = data[2:]
 
+        if command_type == 0x07 and len(command_data) >= 6:
+            subcommand_type = command_data[5]
+            if subcommand_type == 0x03:
+                return MemorySetting1Command(command_data)
+            elif subcommand_type == 0x06:
+                return MemorySetting2Command(command_data)
+
         return COMMAND_TYPES.get(command_type, cls)(command_data)
+
 
     def __init__(self, data):
         self._data = data
